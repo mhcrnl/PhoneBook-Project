@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D6C736781F90AA1500D037F7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C736771F90AA1500D037F7 /* main.swift */; };
+		D6C7367F1F90BE9500D037F7 /* PhoneInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C7367E1F90BE9500D037F7 /* PhoneInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		D6C736741F90AA1500D037F7 /* Phonebook Step1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Phonebook Step1"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C736771F90AA1500D037F7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		D6C7367E1F90BE9500D037F7 /* PhoneInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				D6C736771F90AA1500D037F7 /* main.swift */,
+				D6C7367E1F90BE9500D037F7 /* PhoneInfo.swift */,
 			);
 			path = "Phonebook Step1";
 			sourceTree = "<group>";
@@ -120,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6C7367F1F90BE9500D037F7 /* PhoneInfo.swift in Sources */,
 				D6C736781F90AA1500D037F7 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

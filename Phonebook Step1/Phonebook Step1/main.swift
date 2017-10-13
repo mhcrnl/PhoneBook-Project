@@ -8,27 +8,5 @@
 
 import Foundation
 
-class PhoneInfo {
-    var name:String
-    var phoneNumber:String
-    var birthday:String?
-    
-    init(name:String, phoneNumber:String, birthDay:String?) {
-        self.name = name
-        self.phoneNumber = phoneNumber
-        self.birthday = birthDay
-    }
-    
-    convenience init(name:String, phoneNumber:String) {
-        self.init(name: name, phoneNumber: phoneNumber)
-    }
-    
-    func printPhoneInfo() -> Void {
-        print("Name: \(self.name)")
-        print("Phone Number: \(self.phoneNumber)")
-        if let birthDay = self.birthday {
-            print("Birthday: \(birthDay)")
-        }
-    }
-}
+
 
