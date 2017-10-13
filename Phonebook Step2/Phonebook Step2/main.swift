@@ -24,13 +24,13 @@ func menuInput(input:String?) -> Bool {
             if inputValue! > 0 && inputValue! < 3 {
                 return true
             } else {
-                print("**************************")
+                print("\n**************************")
                 print("유효한 메뉴를 선택해주세요.")
                 return false
             }
         }
     }
-    print("**************************")
+    print("\n**************************")
     print("숫자만 입력가능 합니다.")
     return false
 }
@@ -39,7 +39,7 @@ repeat {
     showMenu()
     if(!menuInput(input: readLine())) {
         print("다시 입력해주세요.")
-        print("**************************")
+        print("**************************\n")
     }
 } while(inputValue != 2);
 print("프로그램을 종료합니다.")
