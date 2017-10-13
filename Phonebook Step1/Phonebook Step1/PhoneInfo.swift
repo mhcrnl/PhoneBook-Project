@@ -20,7 +20,7 @@ class PhoneInfo {
     }
     
     convenience init(name:String, phoneNumber:String) {
-        self.init(name: name, phoneNumber: phoneNumber)
+        self.init(name: name, phoneNumber: phoneNumber, birthDay: nil)
     }
     
     func printPhoneInfo() -> Void {
