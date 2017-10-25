@@ -29,6 +29,7 @@ class PhoneInfo {
     
     //  객체의 저장된 property를 출력하는 기능 정의
     func printPhoneInfo() -> Void {
+        print("\n<입력된 정보 출력>")
         print("Name: \(self.name)")
         print("Phone Number: \(self.phoneNumber)")
         //  Optional Binding을 이용하여 생일이 입력된 경우만 출력하는 로직
