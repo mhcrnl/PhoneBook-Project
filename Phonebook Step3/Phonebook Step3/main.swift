@@ -9,12 +9,13 @@
 import Foundation
 
 var inputValue:Int?
-var userPhoneInfo:PhoneInfo?
+var managerObject:Manager = Manager()
 
 func showMenu() -> Void {
     print("원하시는 메뉴를 선택해주세요...")
     print("1. 전화번호 입력")
-    print("2. 프로그램 종료")
+    print("2. 연락처 검색")
+    print("3. 프로그램 종료")
     print("선택: ", separator: "", terminator: "")
 }
 
@@ -38,33 +39,31 @@ func phoneInfoInput() -> Dictionary<String, String?> {
     return contactInfo
 }
 
-func phoneInfoObjectCreation(contactInfo:Dictionary<String, String?>) -> Bool {
-    if contactInfo["birthday"] == nil {
-        userPhoneInfo = PhoneInfo(name: contactInfo["name"]!!, phoneNumber: contactInfo["phoneNum"]!!)
-    }
-    else {
-        userPhoneInfo = PhoneInfo(name: contactInfo["name"]!!, phoneNumber: contactInfo["phoneNum"]!!, birthDay: contactInfo["birthday"]!!)
-    }
-    if userPhoneInfo == nil {
-        return false;
-    }
-    userPhoneInfo!.printPhoneInfo()
-    return true
-}
-
 func menuInput(input:String?) -> Bool {
     if let inputStr = input {
         inputValue = Int(inputStr)
         if inputValue != nil {
             switch inputValue! {
             case 1:
-                if(phoneInfoObjectCreation(contactInfo: phoneInfoInput())) {
-                    print("**************************\n")
-                } else {
-                    print("연락처 생성에 실패했습니다.")
-                }
+//                if(phoneInfoObjectCreation(contactInfo: phoneInfoInput())) {
+//                    print("**************************\n")
+//                } else {
+//                    print("연락처 생성에 실패했습니다.")
+//                }
                 break
             case 2:
+                print("검색을 원하는 이름을 입력해주세요: ", separator: "", terminator: "")
+                if let inputName = readLine() {
+                    if managerObject.searchPhoneInfo(name: inputName) {
+                        print("\n**************************")
+                    } else {
+                        print("\(inputName)에 대한 연락처 검색 결과가 존재하지 않습니다.")
+                    }
+                } else {
+                    print("다시 입력해주세요.")
+                }
+                break
+            case 3:
                 print("프로그램을 종료합니다.")
                 break
             default:
@@ -87,4 +86,4 @@ repeat {
         print("다시 입력해주세요.")
         print("**************************\n")
     }
-} while(inputValue != 2);
+} while(inputValue != 3);
