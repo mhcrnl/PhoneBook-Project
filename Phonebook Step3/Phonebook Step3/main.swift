@@ -45,17 +45,15 @@ func menuInput(input:String?) -> Bool {
         if inputValue != nil {
             switch inputValue! {
             case 1:
-//                if(phoneInfoObjectCreation(contactInfo: phoneInfoInput())) {
-//                    print("**************************\n")
-//                } else {
-//                    print("연락처 생성에 실패했습니다.")
-//                }
+                managerObject.createPhoneInfoObject(contactInfo: phoneInfoInput())
+                print("연락처 생성에 성공했습니다.")
+                print("**************************\n")
                 break
             case 2:
                 print("검색을 원하는 이름을 입력해주세요: ", separator: "", terminator: "")
                 if let inputName = readLine() {
                     if managerObject.searchPhoneInfo(name: inputName) {
-                        print("\n**************************")
+                        print("**************************\n")
                     } else {
                         print("\(inputName)에 대한 연락처 검색 결과가 존재하지 않습니다.")
                     }
