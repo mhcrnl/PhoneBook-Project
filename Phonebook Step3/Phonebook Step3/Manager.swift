@@ -33,7 +33,14 @@ class Manager {
         return (-1, false)
     }
     //  PhoneInfo 삭제 기능
-    func removePhoneInfo() -> Void {
-        
+    func removePhoneInfo(name:String) -> Bool {
+        let searchResult = searchPhoneInfo(name: name)
+        if searchResult.1 {
+            phoneInfos.remove(at: searchResult.0)
+            return true
+        } else {
+            print("입력하신 연락처가 존재하지 않습니다.")
+            return false
+        }
     }
 }
