@@ -21,13 +21,19 @@ class Manager {
         }
     }
     //  PhoneInfo 검색 기능
-    func searchPhoneInfo(name:String) -> Bool {
+    func searchPhoneInfo(name:String) -> (Int, Bool) {
+        var index:Int = 0
         for phoneInfo in self.phoneInfos {
             if phoneInfo.name == name {
                 phoneInfo.printPhoneInfo()
-                return true
+                return (index, true)
             }
+            index += 1
         }
-        return false
+        return (-1, false)
+    }
+    //  PhoneInfo 삭제 기능
+    func removePhoneInfo() -> Void {
+        
     }
 }

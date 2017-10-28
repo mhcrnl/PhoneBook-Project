@@ -52,7 +52,7 @@ func menuInput(input:String?) -> Bool {
             case 2:
                 print("검색을 원하는 이름을 입력해주세요: ", separator: "", terminator: "")
                 if let inputName = readLine() {
-                    if managerObject.searchPhoneInfo(name: inputName) {
+                    if managerObject.searchPhoneInfo(name: inputName).1 {
                         print("**************************\n")
                     } else {
                         print("\(inputName)에 대한 연락처 검색 결과가 존재하지 않습니다.")
