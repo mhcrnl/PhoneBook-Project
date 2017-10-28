@@ -40,6 +40,7 @@ class Manager {
             return true
         } else {
             print("입력하신 연락처가 존재하지 않습니다.")
+            print("**************************\n")
             return false
         }
     }

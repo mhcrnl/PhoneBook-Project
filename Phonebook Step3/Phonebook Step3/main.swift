@@ -15,7 +15,8 @@ func showMenu() -> Void {
     print("원하시는 메뉴를 선택해주세요...")
     print("1. 전화번호 입력")
     print("2. 연락처 검색")
-    print("3. 프로그램 종료")
+    print("3. 연락처 삭제")
+    print("4. 프로그램 종료")
     print("선택: ", separator: "", terminator: "")
 }
 
@@ -56,12 +57,24 @@ func menuInput(input:String?) -> Bool {
                         print("**************************\n")
                     } else {
                         print("\(inputName)에 대한 연락처 검색 결과가 존재하지 않습니다.")
+                        print("**************************\n")
                     }
                 } else {
                     print("다시 입력해주세요.")
                 }
                 break
             case 3:
+                print("삭제를 원하는 이름을 입력해주세요: ", separator: "", terminator: "")
+                if let name = readLine() {
+                    if managerObject.removePhoneInfo(name: name) {
+                        print("연락처 삭제에 성공했습니다.")
+                        print("**************************\n")
+                    }
+                } else {
+                    print("다시 입력해주세요.")
+                }
+                break
+            case 4:
                 print("프로그램을 종료합니다.")
                 break
             default:
@@ -84,4 +97,4 @@ repeat {
         print("다시 입력해주세요.")
         print("**************************\n")
     }
-} while(inputValue != 3);
+} while(inputValue != 4);
