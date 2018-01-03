@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D61F9E621FFBD986000F4D83 /* PhoneInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61F9E611FFBD986000F4D83 /* PhoneInfo.swift */; };
 		D68176C01FFBD88A006948DE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68176BF1FFBD88A006948DE /* main.swift */; };
+		D68CE7C01FFD1BD700930E07 /* PhoneUnivInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68CE7BF1FFD1BD700930E07 /* PhoneUnivInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 		D61F9E611FFBD986000F4D83 /* PhoneInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneInfo.swift; sourceTree = "<group>"; };
 		D68176BC1FFBD88A006948DE /* Phonebook Step4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Phonebook Step4"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D68176BF1FFBD88A006948DE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		D68CE7BF1FFD1BD700930E07 /* PhoneUnivInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneUnivInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				D68176BF1FFBD88A006948DE /* main.swift */,
 				D61F9E611FFBD986000F4D83 /* PhoneInfo.swift */,
+				D68CE7BF1FFD1BD700930E07 /* PhoneUnivInfo.swift */,
 			);
 			path = "Phonebook Step4";
 			sourceTree = "<group>";
@@ -123,6 +126,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D68CE7C01FFD1BD700930E07 /* PhoneUnivInfo.swift in Sources */,
 				D61F9E621FFBD986000F4D83 /* PhoneInfo.swift in Sources */,
 				D68176C01FFBD88A006948DE /* main.swift in Sources */,
 			);

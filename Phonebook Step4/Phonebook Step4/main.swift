@@ -2,7 +2,7 @@
 //  main.swift
 //  Phonebook Step4
 //
-//  Created by JuYong Lee on 03/01/2018.
+//  Created by JuYong Lee.
 //  Copyright © 2018 JuYong Lee. All rights reserved.
 //
 
