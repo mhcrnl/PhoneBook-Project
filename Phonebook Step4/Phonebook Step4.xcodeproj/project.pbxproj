@@ -10,6 +10,7 @@
 		D61F9E621FFBD986000F4D83 /* PhoneInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61F9E611FFBD986000F4D83 /* PhoneInfo.swift */; };
 		D68176C01FFBD88A006948DE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68176BF1FFBD88A006948DE /* main.swift */; };
 		D68CE7C01FFD1BD700930E07 /* PhoneUnivInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68CE7BF1FFD1BD700930E07 /* PhoneUnivInfo.swift */; };
+		D68CE7C31FFD1DC300930E07 /* PhoneCompanyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68CE7C21FFD1DC300930E07 /* PhoneCompanyInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,7 @@
 		D68176BC1FFBD88A006948DE /* Phonebook Step4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Phonebook Step4"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D68176BF1FFBD88A006948DE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		D68CE7BF1FFD1BD700930E07 /* PhoneUnivInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneUnivInfo.swift; sourceTree = "<group>"; };
+		D68CE7C21FFD1DC300930E07 /* PhoneCompanyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCompanyInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				D68176BF1FFBD88A006948DE /* main.swift */,
 				D61F9E611FFBD986000F4D83 /* PhoneInfo.swift */,
 				D68CE7BF1FFD1BD700930E07 /* PhoneUnivInfo.swift */,
+				D68CE7C21FFD1DC300930E07 /* PhoneCompanyInfo.swift */,
 			);
 			path = "Phonebook Step4";
 			sourceTree = "<group>";
@@ -128,6 +131,7 @@
 			files = (
 				D68CE7C01FFD1BD700930E07 /* PhoneUnivInfo.swift in Sources */,
 				D61F9E621FFBD986000F4D83 /* PhoneInfo.swift in Sources */,
+				D68CE7C31FFD1DC300930E07 /* PhoneCompanyInfo.swift in Sources */,
 				D68176C01FFBD88A006948DE /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
