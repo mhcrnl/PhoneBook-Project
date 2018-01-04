@@ -20,9 +20,9 @@ func showMenu() -> Void {
     print("선택: ", separator: "", terminator: "")
 }
 
-func phoneInfoInput() -> Dictionary<String, String?> {
-    var contactInfo:Dictionary<String, String?> = ["name": nil, "phoneNum": nil, "Birthday": nil]
+func phoneInfoInput(selectCase:Int) -> Dictionary<String, String> {
     
+    var contactInfo:Dictionary<String, String> = [:]
     print("이름: ", separator: "", terminator: "")
     if let name = readLine() {
         contactInfo["name"] = name
@@ -33,9 +33,23 @@ func phoneInfoInput() -> Dictionary<String, String?> {
         contactInfo["phoneNum"] = phoneNumber
     }
     
-    print("생년월일: ", separator: "", terminator: "")
-    if let birthDay = readLine() {
-        contactInfo["birthday"] = birthDay
+    switch selectCase {
+    case 2:
+        print("전공: ", separator: "", terminator: "")
+        if let major = readLine() {
+            contactInfo["major"] = major
+        }
+        print("학년: ", separator: "", terminator: "")
+        if let grade = readLine() {
+            contactInfo["grade"] = grade
+        }
+    case 3:
+        print("회사: ", separator: "", terminator: "")
+        if let company = readLine() {
+            contactInfo["company"] = company
+        }
+    default:
+        print("Default Never Used!")
     }
     return contactInfo
 }
@@ -51,25 +65,29 @@ func menuInput(input:String?) -> Bool {
                 print("선택>> ", separator: "", terminator: "")
                 if let selectStrValue = readLine() {
                     if let selectIntValue = Int(selectStrValue) {
+                        var caseNum:Int = 0
                         switch selectIntValue {
                         case 1:
-                            print("일반")
+                            caseNum = 1
                         case 2:
-                            print("대학")
+                            caseNum = 2
                         case 3:
-                            print("학사")
+                            caseNum = 3
                         default:
                             print("유효한 메뉴를 선택해주세요.")
+                            caseNum = -1
                         }
-                        
+                        if caseNum != -1 {
+//                            managerObject.createPhoneInfoObject(contactInfo: phoneInfoInput(selectCase:caseNum))
+                            print(phoneInfoInput(selectCase:caseNum))
+                            print("연락처 생성에 성공했습니다.")
+                            print("**************************\n")
+                            break
+                        }
                     } else {
                         print("숫자만 입력가능 합니다.")
                     }
                 }
-//                managerObject.createPhoneInfoObject(contactInfo: phoneInfoInput())
-//                print("연락처 생성에 성공했습니다.")
-//                print("**************************\n")
-//                break
             case 2:
                 print("검색을 원하는 이름을 입력해주세요: ", separator: "", terminator: "")
                 if let inputName = readLine() {
