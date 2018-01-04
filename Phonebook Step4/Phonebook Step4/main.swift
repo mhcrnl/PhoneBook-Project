@@ -40,9 +40,16 @@ func phoneInfoInput(selectCase:Int) -> Dictionary<String, String> {
         if let major = readLine() {
             contactInfo["major"] = major
         }
-        print("학년: ", separator: "", terminator: "")
-        if let grade = readLine() {
-            contactInfo["grade"] = grade
+        while true {
+            print("학년: ", separator: "", terminator: "")
+            if let grade = readLine() {
+                if let gradeInt = Int(grade) {
+                    contactInfo["grade"] = String(gradeInt)
+                    break;
+                } else {
+                    print("학년을 다시 입력해주세요")
+                }
+            }
         }
     case 3:
         print("회사: ", separator: "", terminator: "")
