@@ -78,8 +78,7 @@ func menuInput(input:String?) -> Bool {
                             caseNum = -1
                         }
                         if caseNum != -1 {
-//                            managerObject.createPhoneInfoObject(contactInfo: phoneInfoInput(selectCase:caseNum))
-                            print(phoneInfoInput(selectCase:caseNum))
+                            managerObject.createPhoneInfoObject(contactInfo: phoneInfoInput(selectCase:caseNum))
                             print("연락처 생성에 성공했습니다.")
                             print("**************************\n")
                             break

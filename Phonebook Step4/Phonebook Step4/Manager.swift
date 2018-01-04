@@ -13,8 +13,18 @@ class Manager {
     var phoneInfos:Array<PhoneInfo> = []
     
     //  PhoneInfo 저장 기능
-    func createPhoneInfoObject(contactInfo:Dictionary<String, String?>) -> Void {
-        self.phoneInfos.append(PhoneInfo(name: contactInfo["name"]!!, phoneNumber: contactInfo["phoneNum"]!!))
+    func createPhoneInfoObject(contactInfo:Dictionary<String, String>) -> Void {
+        switch contactInfo["case"]! {
+        case "1":
+            self.phoneInfos.append(PhoneInfo(name: contactInfo["name"]!, phoneNumber: contactInfo["phoneNum"]!))
+        case "2":
+            self.phoneInfos.append(PhoneInfo(name: contactInfo["name"]!, phoneNumber: contactInfo["phoneNum"]!))
+        case "3":
+            self.phoneInfos.append(PhoneInfo(name: contactInfo["name"]!, phoneNumber: contactInfo["phoneNum"]!))
+        default:
+            print("Default Never Used!")
+        }
+
     }
     //  PhoneInfo 검색 기능
     func searchPhoneInfo(name:String) -> (Int, Bool) {
