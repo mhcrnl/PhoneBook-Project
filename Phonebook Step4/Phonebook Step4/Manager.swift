@@ -18,9 +18,9 @@ class Manager {
         case "1":
             self.phoneInfos.append(PhoneInfo(name: contactInfo["name"]!, phoneNumber: contactInfo["phoneNum"]!))
         case "2":
-            self.phoneInfos.append(PhoneInfo(name: contactInfo["name"]!, phoneNumber: contactInfo["phoneNum"]!))
+            self.phoneInfos.append(PhoneUnivInfo(name: contactInfo["name"]!, phoneNumber: contactInfo["phoneNum"]!, major: contactInfo["major"]!, year: Int(contactInfo["grade"]!)!))
         case "3":
-            self.phoneInfos.append(PhoneInfo(name: contactInfo["name"]!, phoneNumber: contactInfo["phoneNum"]!))
+            self.phoneInfos.append(PhoneCompanyInfo(name: contactInfo["name"]!, phoneNumber: contactInfo["phoneNum"]!, company: contactInfo["company"]!))
         default:
             print("Default Never Used!")
         }

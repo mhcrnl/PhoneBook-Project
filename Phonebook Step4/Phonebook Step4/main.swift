@@ -23,6 +23,7 @@ func showMenu() -> Void {
 func phoneInfoInput(selectCase:Int) -> Dictionary<String, String> {
     
     var contactInfo:Dictionary<String, String> = [:]
+    contactInfo["case"] = String(selectCase)
     print("이름: ", separator: "", terminator: "")
     if let name = readLine() {
         contactInfo["name"] = name
